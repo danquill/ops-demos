@@ -1,0 +1,8 @@
+---
+- hosts: minecraft
+  vars:
+    minecraft_install: false
+  tasks:
+    - name: Remove Minecraft Server
+      import_role:
+        name: minecraft
