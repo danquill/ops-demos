@@ -8,8 +8,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: files/ArgoCD/appofapps/mineops-servers/customer-0
-    repoURL: https://github.com/KyWa/mineOps.git
+    path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-0
+    repoURL: https://github.com/danquill/ops-demos.git
     targetRevision: master
     directory:
       recurse: true
