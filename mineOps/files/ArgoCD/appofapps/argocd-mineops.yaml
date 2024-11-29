@@ -9,8 +9,8 @@ spec:
   project: default
   source:
     path: mineOps/files/ArgoCD/appofapps/apps
-    repoURL: https://github.com/KyWa/blogs.git
-    targetRevision: master
+    repoURL: https://github.com/danquill/ops-demos.git
+    targetRevision: main
     directory:
       recurse: true
   syncPolicy:

@@ -10,7 +10,7 @@ spec:
   source:
     path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-0
     repoURL: https://github.com/danquill/ops-demos.git
-    targetRevision: master
+    targetRevision: main
     directory:
       recurse: true
   syncPolicy:
