@@ -5,7 +5,8 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    server: https://kubernetes.default.svc
+    server: https://192.168.64.5:16443
+    namespace: mineops-1
   project: default
   source:
     path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-1
@@ -17,3 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
