@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-2
-    repoURL: hhttps://github.com/danquill/ops-demos.git
+    repoURL: https://github.com/danquill/ops-demos.git
     targetRevision: master
     directory:
       recurse: true
