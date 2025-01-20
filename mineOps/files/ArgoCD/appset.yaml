@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: mineops
+  namespace: openshift-gitops
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - clusters:
+      selector:
+        matchLabels:
+          cluster-type: "remote"
+  template:
+    metadata:
+      name: '{{.name}}-mineops' # 'name' field of the Secret
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/danquill/ops-demos.git
+        targetRevision: main
+        path: mineOps/files/ArgoCD/appofapps/{{.name}}
+        helm:
+          valueFiles:
+          - mineOps/files/ArgoCD/appofapps/values/{{.name}}
+          
+      destination:
+        server: '{{.server}}' # 'server' field of the secret
