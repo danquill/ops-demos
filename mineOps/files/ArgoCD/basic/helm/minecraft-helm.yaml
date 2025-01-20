@@ -2,11 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: helm-minecraft
+  namespace: openshift-gitops
 spec:
   project: default
-  source:
-    chart: minecraft
-    repoURL: https://itzg.github.io/minecraft-server-charts/
+  sources:
+    - repoURL: https://itzg.github.io/minecraft-server-charts/
+      chart: minecraft
+      targetRevision: 4.23.7
+      helm:
+        valueFiles:
+        - $value/mineOps/values/dev/minecraft-values.yaml
+    - repoURL: https://github.com/danquill/ops-demos.git
+      targetRevision: main
+      ref: value
   destination:
     server: https://api.crc.testing:6443
     namespace: helm-minecraft
