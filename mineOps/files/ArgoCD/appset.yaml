@@ -28,6 +28,7 @@ spec:
           ref: value 
       destination:
         server: '{{.server}}' # 'server' field of the secret
+        namespace: '{{.name}}-mineops'
       syncPolicy:
         automated:
           prune: true
