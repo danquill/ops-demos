@@ -5,7 +5,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    server: https://kubernetes.default.svc
+    server: https://api.crc.testing:6443
   project: default
   source:
     path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-0

@@ -5,7 +5,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    server: https://192.168.64.5:16443
+    server: https://api.crc.testing:6443
     namespace: mineops-1
   project: default
   source:
