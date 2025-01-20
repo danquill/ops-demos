@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: customer-2
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   destination:
     server: https://192.168.64.5:16443
