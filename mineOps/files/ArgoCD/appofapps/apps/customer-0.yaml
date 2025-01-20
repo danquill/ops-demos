@@ -6,6 +6,7 @@ metadata:
 spec:
   destination:
     server: https://api.crc.testing:6443
+    namespace: mineops-0
   project: default
   source:
     path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-0
@@ -17,3 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
