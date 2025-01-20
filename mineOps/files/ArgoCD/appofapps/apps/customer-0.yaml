@@ -9,9 +9,9 @@ spec:
     namespace: mineops-0
   project: default
   source:
-    path: mineOps/files/ArgoCD/appofapps/mineops-servers/customer-0
-    repoURL: https://github.com/danquill/ops-demos.git
-    targetRevision: main
+    path: charts/minecraft
+    repoURL: https://github.com/itzg/minecraft-server-charts.git
+    targetRevision: master
     directory:
       recurse: true
   syncPolicy:
